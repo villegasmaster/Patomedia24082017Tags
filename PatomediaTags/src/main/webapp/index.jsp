@@ -6,38 +6,45 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Dark Login Form</title>
+  <title>Patomedia Tags</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/patomedia.css"/>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+
 <body>
-  <form method="post" action="index.html" class="login">
-    <p>
-      <label for="login">Email:</label>
-      <input type="text" name="login" id="login" value="name@example.com">
-    </p>
+  <form method="post" action=""  class="login" enctype="multipart/form-data" method="post">
+  <div class="container">
+	  <div id="start">
+	    <p>
+	     <h1>ORIGEN</h1>
+	     	
+	       <input type="radio" name="radio_tag" id="radio_tag" value="TagOption"> TagOption </br>
+	        
+	   <input type="text" name="start" id="start" value="" size="100"></br>
+	      
+	      <input type="text" name="file_name" id="file_name" value="" size="30">
+	      <input type="file" name="file" id="file" value="" multiple="multiple">
+	    </p>
+	 </div>
+	 <div id="destiny">
+	    <p>
+	      <h1>DESTINO</h1>
+	      <input type="text" name="destiny" id="destiny" value="" size="100">
+	    </p>
+	   </div>
+	  <div id="button_submit">
+		 <p>
+	      <button type="submit">Calcular</button>
+	<!--        <button type="submit" class="login-button">Calcular</button> -->
+	    </p>
+    </div>
+   </div>
+    
 
-    <p>
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" value="4815162342">
-    </p>
 
-    <p class="login-submit">
-      <button type="submit" class="login-button">Login</button>
-    </p>
-
-    <p class="forgot-password"><a href="index.html">Forgot your password?</a></p>
   </form>
 
-  <section class="about">
-    <p class="about-links">
-      <a href="http://www.cssflow.com/snippets/dark-login-form" target="_parent">View Article</a>
-      <a href="http://www.cssflow.com/snippets/dark-login-form.zip" target="_parent">Download</a>
-    </p>
-    <p class="about-author">
-      &copy; 2012&ndash;2013 <a href="http://thibaut.me" target="_blank">Thibaut Courouble</a> -
-      <a href="http://www.cssflow.com/mit-license" target="_blank">MIT License</a><br>
-      Original PSD by <a href="http://365psd.com/day/2-234/" target="_blank">Rich McNabb</a>
-  </section>
+ 
 </body>
 </html>
