@@ -13,13 +13,13 @@
 </head>
 
 <body>
-  <form method="post" action=""  class="login" enctype="multipart/form-data" method="post">
+  <form method="post" action="OperationsServlet"  class="login" id="formTag" enctype="multipart/form-data">
   <div class="container">
 	  <div id="start">
 	    <p>
 	     <h1>ORIGEN</h1>
 	     	
-	       <input type="radio" name="radio_tag" id="radio_tag" value="TagOption"> TagOption </br>
+	       <input type="radio" name="radio_opt" id="radio_opt" value="T"> TagOption </br>
 	        
 	   <input type="text" name="start" id="start" value="" size="100"></br>
 	      
@@ -30,6 +30,7 @@
 	 <div id="destiny">
 	    <p>
 	      <h1>DESTINO</h1>
+	      <input type="radio" name="radio_opt" id="radio_opt" value="F"> FileOption </br>
 	      <input type="text" name="destiny" id="destiny" value="" size="100">
 	    </p>
 	   </div>

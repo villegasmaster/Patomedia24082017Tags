@@ -5,6 +5,8 @@ import java.util.Properties;
 
 public class PropertiesConf {
 	
+	// ASI ES LA LLAMADA: Configuration.getInstance().getProperty(Configuration.DATABASE_SERVER)
+	
 	 Properties properties = null;
 	 
 	 /** Configuration file name */
