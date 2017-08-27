@@ -2,7 +2,6 @@ package org.patomediatags.operations;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
 
@@ -44,18 +43,21 @@ public class OperationsServlet extends HttpServlet {
 	        try {
 	            @SuppressWarnings("unchecked")
 				List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+	            String opcion = multiparts.get(0).getString();
 	            
-	            if("T".equals(multiparts.get(0))){
+	            if("T".equals(opcion)){
 	            	
-	            	Tag tag = new Tag();
-	            	String adServe = "SpringServe"; // Se cogerá del form
-	            	String type = "Desktop"; // Se cogerá del form
-	            	String stringMacro = PropertiesConf.getInstance().getProperty(adServe, type);
-	            	String [] macros = stringMacro.split(",");
+//	            	Tag tag = new Tag();
+//	            	String adServe = "SpringServe"; // Se cogerá del form
+//	            	String type = "Desktop"; // Se cogerá del form
+//	            	String stringMacro = PropertiesConf.getInstance().getProperty(adServe, type);
+//	            	//String [] macros = stringMacro.split(",");
+	            	
+	            	//List<String> ads = PropertiesConf.getInstance().getAds();
 	            	
 	            	
-	            	tag.setAdName("SpringServe");
-	            	tag.setTag(multiparts.get(1).getString());
+//	            	tag.setAdName("SpringServe");
+//	            	tag.setTag(multiparts.get(1).getString());
 	            	
 	            }else{
 	            	 for(FileItem item : multiparts){
@@ -80,7 +82,7 @@ public class OperationsServlet extends HttpServlet {
 	        request.setAttribute("message", "Sorry this Servlet only handles file upload request");
 	    }
 
-	    request.getRequestDispatcher("/uploadfileController.jsp").forward(request, response);
+	    request.getRequestDispatcher("/index.jsp").forward(request, response);
 
 	}
 	

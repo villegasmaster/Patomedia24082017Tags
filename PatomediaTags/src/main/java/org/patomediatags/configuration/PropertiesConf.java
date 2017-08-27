@@ -1,7 +1,11 @@
 package org.patomediatags.configuration;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
+
+import org.patomediatags.model.Ads;
 
 public class PropertiesConf {
 	
@@ -45,5 +49,22 @@ public class PropertiesConf {
     	String key = ads + "." + type;
         return this.properties.getProperty(key);
     }//getProperty
+    
+    public List<Ads> getAds (){
+    	
+    	String ads = this.properties.getProperty("ads");
+    	String[] adsTemp = ads.split(",");
+    	List<Ads> adsList = new ArrayList<Ads>();
+    	for(int i = 0; i < adsTemp.length; i++){
+    		Ads adsT = new Ads();
+    		adsT.setValue(adsTemp[i]);
+    		adsList.add(adsT);
+    	}
+    	
+    	
+    	
+    	
+    	return adsList;
+    }
 }
 

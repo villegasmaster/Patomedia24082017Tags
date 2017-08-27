@@ -10,8 +10,24 @@
   	<description></description>
   	<servlet-class>org.patomediatags.operations.OperationsServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>BeforeIndex</servlet-name>
+  	<display-name>BeforeIndex</display-name>
+  	<description></description>
+  	<servlet-class>org.patomediatags.operations.BeforeIndex</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>OperationsServlet</servlet-name>
   	<url-pattern>/OperationsServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BeforeIndex</servlet-name>
+  	<url-pattern>/BeforeIndex</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+	    <welcome-file>BeforeIndex</welcome-file>
+	    <welcome-file>index.html</welcome-file>
+	    <welcome-file>index.htm</welcome-file>
+	    <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
