@@ -28,8 +28,10 @@ public class BeforeIndex extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	List<Ads> ads = PropertiesConf.getInstance().getAds();
+    	List<String> types = PropertiesConf.getInstance().getType();
 		 HttpSession session = request.getSession();
 		 session.setAttribute("ads",ads); 
+		 session.setAttribute("types", types);
 		// System.out.println(ads);
 		 
 		

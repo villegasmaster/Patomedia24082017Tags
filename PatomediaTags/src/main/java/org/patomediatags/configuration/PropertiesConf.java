@@ -51,7 +51,6 @@ public class PropertiesConf {
     }//getProperty
     
     public List<Ads> getAds (){
-    	
     	String ads = this.properties.getProperty("ads");
     	String[] adsTemp = ads.split(",");
     	List<Ads> adsList = new ArrayList<Ads>();
@@ -60,11 +59,19 @@ public class PropertiesConf {
     		adsT.setValue(adsTemp[i]);
     		adsList.add(adsT);
     	}
-    	
-    	
-    	
-    	
+
     	return adsList;
+    }
+    
+    public List<String> getType (){
+    	String ads = this.properties.getProperty("type");
+    	String[] typeTemp = ads.split(",");
+    	List<String> typeList = new ArrayList<String>();
+    	for(int i = 0; i < typeTemp.length; i++){
+    		typeList.add(typeTemp[i]);
+    	}
+
+    	return typeList;
     }
 }
 
