@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProcessTag {
+public final class ProcessTag {
 	
 	public static Map<String, List<String>> getUrlParams(String url) {
 	    try {
