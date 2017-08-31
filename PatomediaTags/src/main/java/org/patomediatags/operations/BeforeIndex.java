@@ -52,5 +52,9 @@ public class BeforeIndex extends HttpServlet {
 		 session.setAttribute("ads",ads); 
 		 //System.out.println(ads);
 	}
+	
+	
+	
+	
 
 }
