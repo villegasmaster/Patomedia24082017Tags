@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.patomediatags.configuration.PropertiesConf;
-import org.patomediatags.model.Tag;
-
+import java.net.URL;;
 /**
  * Servlet implementation class ServletPrueba
  */
@@ -44,6 +42,7 @@ public class OperationsServlet extends HttpServlet {
 	            @SuppressWarnings("unchecked")
 				List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
 	            String opcion = multiparts.get(0).getString();
+	       
 	            
 	            if("T".equals(opcion)){
 	            	

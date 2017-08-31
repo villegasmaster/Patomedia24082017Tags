@@ -1,5 +1,6 @@
 package org.patomediatags.operations;
 
+
 import java.io.IOException;
 import java.util.List;
 
@@ -33,9 +34,9 @@ public class BeforeIndex extends HttpServlet {
 		 session.setAttribute("ads",ads); 
 		 session.setAttribute("types", types);
 		// System.out.println(ads);
-		 
-		
 		 request.getSession();
+		
+		 
 		 
 		 request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
